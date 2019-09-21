@@ -10,6 +10,14 @@ export default {
         paddingLeft: 48.5,
         paddingRight: 48.5,
     },
+    containerRegister: {
+        backgroundColor: Colors.azul0,
+        flex: 1,
+    },
+    psddingContainer:{
+        paddingLeft: 48.5,
+        paddingRight: 48.5,
+    },
     logo: {
         height: 50.8,
         width: 200

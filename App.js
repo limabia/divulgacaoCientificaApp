@@ -12,6 +12,7 @@ import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import CongratulationsScreen from "./screens/congratulationScreen";
 import UploadScreen from "./screens/UploadScreen";
+import MemeScreen from "./screens/MemeScreen";
 import BiologiaScreen from "./screens/Categorias/BiologiaScreen";
 import ArtigoUmBiologiaScreen from "./screens/Artigos/Biologia/ArtigoUmBiologiaScreen";
 import ArtigoDoisBiologiaScreen from "./screens/Artigos/Biologia/ArtigoDoisBiologiaScreen";
@@ -274,6 +275,15 @@ const CongratulationsScreen_StackNavigator = createStackNavigator({
         }),
     },
 });
+const MemeScreen_StackNavigator = createStackNavigator({
+    MemeScreen: {
+        screen: MemeScreen,
+        navigationOptions: ({navigation}) => ({
+            //sem header
+            header: null
+        }),
+    },
+});
 const LinksScreen_StackNavigator = createStackNavigator({
     LinksScreen: {
         screen: LinksScreen,
@@ -294,7 +304,14 @@ const DrawerNavigator = createDrawerNavigator({
     UploadScreen: {
         screen: UploadScreen_StackNavigator,
         navigationOptions: {
-            drawerLabel: () => 'Submeta seu artigo',
+            drawerLabel: () => 'Submeta um artigo',
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    MemeScreen: {
+        screen: MemeScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
             drawerLockMode: 'locked-closed'
         },
     },

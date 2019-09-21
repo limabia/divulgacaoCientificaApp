@@ -29,11 +29,11 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <ScrollView style={homeStyle.container}>
-                <Text style={[Layout.Medium20Azul, Layout.center, Layout.mt14, Layout.mb15]}>Sobre o que você quer ler hoje?</Text>
+                <Text style={[Layout.Medium20Azul, Layout.center, Layout.mt14, Layout.mb15]}>Sobre o que você quer aprender?</Text>
                 <TouchableOpacity onPress={()=>{this.redirectCienciasHumanasScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
                     <View style={Layout.row}>
                         <View style={{width: '15%'}}>
-                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/2humanas.png')}/>
                         </View>
                         <View style={{width: '85%'}}>
                             <Text style={homeStyle.textCategoria}>Ciências humanas</Text>
@@ -43,7 +43,7 @@ export default class HomeScreen extends React.Component {
                 <TouchableOpacity onPress={()=>{this.redirectBiologiaScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
                     <View style={Layout.row}>
                         <View style={{width: '15%'}}>
-                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/4biologicas.png')}/>
                         </View>
                         <View style={{width: '85%'}}>
                             <Text style={homeStyle.textCategoria}>Ciências Biológicas</Text>
@@ -53,7 +53,7 @@ export default class HomeScreen extends React.Component {
                 <TouchableOpacity onPress={()=>{this.RedirectEngenhariasScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
                     <View style={Layout.row}>
                         <View style={{width: '15%'}}>
-                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/3exatas.png')}/>
                         </View>
                         <View style={{width: '85%'}}>
                             <Text style={homeStyle.textCategoria}>Engenharias</Text>
@@ -63,7 +63,7 @@ export default class HomeScreen extends React.Component {
                 <TouchableOpacity onPress={()=>{this.RedirectPsicanaliseScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
                     <View style={Layout.row}>
                         <View style={{width: '15%'}}>
-                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/1psicanalise.png')}/>
                         </View>
                         <View style={{width: '85%'}}>
                             <Text style={homeStyle.textCategoria}>Psicanalise</Text>

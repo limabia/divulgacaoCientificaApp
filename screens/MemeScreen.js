@@ -7,8 +7,8 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native';
-import homeStyle from '../../assets/css/home';
-import Layout from './../../constants/Layout';
+import homeStyle from '../assets/css/home';
+import Layout from './../constants/Layout';
 export default class MemeScreen extends React.Component {
     redirectUploadMeme(){
         this.props.navigation.navigate('memeScreen')
