@@ -23,6 +23,9 @@ export default class LoginScreen extends React.Component {
     redirectHome() {
         this.props.navigation.navigate('HomeScreen')
     }
+    redirectRegister(){
+        this.props.navigation.navigate('RegisterScreen')
+    }
 
     render() {
         return (
@@ -30,7 +33,7 @@ export default class LoginScreen extends React.Component {
                 <ScrollView>
                     <View style={Layout.alignItemsCenter}>
                         <Image style={[loginStyle.logo, Layout.mt120]}
-                               source={require('../assets/images/robot-dev.png')}/>
+                               source={require('../assets/images/logoBranco.png')}/>
                     </View>
                     <Text style={[Layout.Medium16C2, Layout.mt46]}>Login:</Text>
                     <TextInput style={[loginStyle.input, Layout.mt4]}
@@ -48,6 +51,13 @@ export default class LoginScreen extends React.Component {
                             this.redirectHome()
                         }}>
                         <Text style={[Layout.Medium16C2, Layout.center]}>login</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={[Layout.mt49, loginStyle.styleButton, Layout.blurCard]}
+                        onPress={() => {
+                            this.redirectRegister()
+                        }}>
+                        <Text style={[Layout.Medium16C2, Layout.center]}>registrar</Text>
                     </TouchableOpacity>
                 </ScrollView>
             </KeyboardAvoidingView>

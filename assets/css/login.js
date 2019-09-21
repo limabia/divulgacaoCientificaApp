@@ -11,8 +11,8 @@ export default {
         paddingRight: 48.5,
     },
     logo: {
-        height: 33,
-        width: 108
+        height: 50.8,
+        width: 200
     },
     input:{
         height: 35,
@@ -24,7 +24,7 @@ export default {
         width: '100%',
         borderRadius: 4,
         height: 40,
-        backgroundColor: Colors.azul,
+        backgroundColor: Colors.azulClaro,
         paddingTop: 10.5,
         paddingBottom: 10.5
     }

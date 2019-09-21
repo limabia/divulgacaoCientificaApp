@@ -66,6 +66,23 @@ export default {
     fontSize: 16,
     fontWeight: '500'
   },
+  Normal16C2:{
+    color: Colors.C2,
+    // fontFamily: 'robotmedium',
+    fontSize: 16,
+  },
+  Medium20C2:{
+    color: Colors.C2,
+    // fontFamily: 'robotmedium',
+    fontSize: 20,
+    fontWeight: '500'
+  },
+  Medium30C2:{
+    color: Colors.C2,
+    // fontFamily: 'robotmedium',
+    fontSize: 30,
+    fontWeight: '500'
+  },
   Regular14C2:{
     color: Colors.C2,
     // fontFamily: 'robotmedium',

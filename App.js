@@ -9,6 +9,7 @@ import AppNavigator from './navigation/AppNavigator';
 import HomeScreen from './screens/HomeScreen';
 import LinksScreen from "./screens/LinksScreen";
 import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 import {AppLoading} from "expo";
 import Layout from './constants/Layout.js';
 import {Asset} from "expo-asset";
@@ -66,6 +67,15 @@ class App extends Component {
     }
 }
 
+const RegisterScreen_StackNavigator = createStackNavigator({
+    RegisterScreen: {
+        screen: RegisterScreen,
+        navigationOptions: ({navigation}) => ({
+            //sem header
+            header: null
+        }),
+    },
+});
 const LoginScreen_StackNavigator = createStackNavigator({
     LoginScreen: {
         screen: LoginScreen,
@@ -114,6 +124,13 @@ const DrawerNavigator = createDrawerNavigator({
         screen: LoginScreen_StackNavigator,
         navigationOptions: {
             drawerLabel: 'LoginScreen',
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    RegisterScreen: {
+        screen: RegisterScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: 'RegisterScreen',
             drawerLockMode: 'locked-closed'
         },
     },
