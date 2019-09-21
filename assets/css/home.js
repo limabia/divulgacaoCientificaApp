@@ -8,6 +8,17 @@ export default {
         flex: 1,
         padding: 15
     },
+    containerAzulEscuro: {
+        backgroundColor: Colors.azul,
+        flex: 1,
+        padding: 15
+    },
+
+    containerAzul: {
+        backgroundColor: Colors.azulClaro,
+        flex: 1,
+        padding: 15
+    },
     containerLogo:{
         marginTop: 16,
         marginBottom: 16

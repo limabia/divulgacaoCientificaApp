@@ -151,8 +151,25 @@ export default {
     fontSize: 16,
     fontWeight: '500'
   },
+  medium40:{
+    fontSize: 40,
+    fontWeight: '500',
+    color: Colors.branco
+  },
   light15:{
     fontSize: 12,
     fontWeight: '200'
-  }
+  },
+  lightTexto:{
+    fontSize: 15,
+    fontWeight: '200'
+  },
+  styleButton:{
+    width: '100%',
+    borderRadius: 4,
+    height: 40,
+    backgroundColor: Colors.azulClaro,
+    paddingTop: 10.5,
+    paddingBottom: 10.5
+}
 };

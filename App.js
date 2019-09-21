@@ -10,8 +10,12 @@ import HomeScreen from './screens/HomeScreen';
 import LinksScreen from "./screens/LinksScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import CongratulationsScreen from "./screens/congratulationScreen";
 import UploadScreen from "./screens/UploadScreen";
 import BiologiaScreen from "./screens/Categorias/BiologiaScreen";
+import ArtigoUmBiologiaScreen from "./screens/Artigos/Biologia/ArtigoUmBiologiaScreen";
+import ArtigoDoisBiologiaScreen from "./screens/Artigos/Biologia/ArtigoDoisBiologiaScreen";
+import ArtigoTresBiologiaScreen from "./screens/Artigos/Biologia/ArtigoTresBiologiaScreen";
 import PerfilScreen from "./screens/PerfilScreen";
 import CienciasHumanasScreen from "./screens/Categorias/CienciasHumanasScreen";
 import EngenhariasScreen from "./screens/Categorias/EngenhariasScreen";
@@ -116,6 +120,57 @@ const BiologiaScreen_StackNavigator = createStackNavigator({
         }),
     },
 });
+const ArtigoDoisBiologiaScreen_StackNavigator = createStackNavigator({
+    ArtigoDoisBiologiaScreen: {
+        screen: ArtigoDoisBiologiaScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Leitura em andamento</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('BiologiaScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const ArtigoUmBiologiaScreen_StackNavigator = createStackNavigator({
+    ArtigoUmBiologiaScreen: {
+        screen: ArtigoUmBiologiaScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Leitura em andamento</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('BiologiaScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const ArtigoTresBiologiaScreen_StackNavigator = createStackNavigator({
+    ArtigoTresBiologiaScreen: {
+        screen: ArtigoTresBiologiaScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Leitura em andamento</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('BiologiaScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
 const CienciasHumanasScreen_StackNavigator = createStackNavigator({
     CienciasHumanasScreen: {
         screen: CienciasHumanasScreen,
@@ -210,6 +265,15 @@ const HomeScreen_StackNavigator = createStackNavigator({
         }),
     },
 });
+const CongratulationsScreen_StackNavigator = createStackNavigator({
+    CongratulationsScreen: {
+        screen: CongratulationsScreen,
+        navigationOptions: ({navigation}) => ({
+            //sem header
+            header: null
+        }),
+    },
+});
 const LinksScreen_StackNavigator = createStackNavigator({
     LinksScreen: {
         screen: LinksScreen,
@@ -236,6 +300,34 @@ const DrawerNavigator = createDrawerNavigator({
     },
     BiologiaScreen: {
         screen: BiologiaScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    CongratulationsScreen: {
+        screen: CongratulationsScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    ArtigoDoisBiologiaScreen: {
+        screen: ArtigoDoisBiologiaScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    ArtigoTresBiologiaScreen: {
+        screen: ArtigoTresBiologiaScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    ArtigoUmBiologiaScreen: {
+        screen: ArtigoUmBiologiaScreen_StackNavigator,
         navigationOptions: {
             drawerLabel: () => null,
             drawerLockMode: 'locked-closed'
