@@ -95,10 +95,10 @@ const HomeScreen_StackNavigator = createStackNavigator({
                     <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
                 </TouchableOpacity>,
             headerRight:
-            <View style={Layout.containerFlex}>
+            <TouchableOpacity style={Layout.containerFlex} onPress={() => navigation.navigate('LoginScreen')}>
                 <Image style={[Layout.notificationsImage, Layout.justifyContentCenter, Layout.mr23]}
                        source={require('./assets/images/logout.png')}/>
-            </View>,
+            </TouchableOpacity>,
             headerStyle: {
                 backgroundColor: Colors.branco,
                 height: 56

@@ -40,6 +40,11 @@ export default {
         borderRadius: 4, 
         padding: 20
     },
+    textCategoria:{
+        color: Colors.azul,
+        fontSize: 15, 
+        fontWeight: '600'
+    },
     styleButton:{
         width: '100%',
         borderRadius: 4,

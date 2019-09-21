@@ -10,7 +10,7 @@ import {
 import homeStyle from '../assets/css/home.js';
 import Layout from '../constants/Layout.js';
 import Colors from "../constants/Colors";
-export default class HomeScreen extends React.Component {
+export default class RecuperacaoScreen extends React.Component {
     redirectUploadArquivos(){
         this.props.navigation.navigate('uploadScreen')
     }
