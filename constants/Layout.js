@@ -61,7 +61,7 @@ export default {
     alignItems: 'flex-start'
   },
   Medium16C2:{
-    color: Colors.C2,
+    color: Colors.branco,
     // fontFamily: 'robotmedium',
     fontSize: 16,
     fontWeight: '500'
@@ -109,8 +109,8 @@ export default {
     marginLeft: 16
   },
   notificationsImage:{
-    height: 17,
-    width: 15,
+    height: 25,
+    width: 25,
   },
   pillNotifications:{
     height: 8,

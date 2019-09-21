@@ -89,7 +89,7 @@ const HomeScreen_StackNavigator = createStackNavigator({
     HomeScreen: {
         screen: HomeScreen,
         navigationOptions: ({navigation}) => ({
-            headerTitle: <Text style={Layout.textHeader}>Home</Text>,
+            headerTitle: <Text style={Layout.textHeader}>Escolha uma categoria</Text>,
             headerLeft:
                 <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')} >
                     <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
@@ -97,10 +97,7 @@ const HomeScreen_StackNavigator = createStackNavigator({
             headerRight:
             <View style={Layout.containerFlex}>
                 <Image style={[Layout.notificationsImage, Layout.justifyContentCenter, Layout.mr23]}
-                       source={require('./assets/images/notifications.png')}/>
-                <View style={[Layout.pillNotifications]}/>
-                <Image style={[Layout.settingsImage, Layout.justifyContentCenter, Layout.mr23]}
-                       source={require('./assets/images/settings.png')}/>
+                       source={require('./assets/images/logout.png')}/>
             </View>,
             headerStyle: {
                 backgroundColor: Colors.branco,

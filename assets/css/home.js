@@ -13,8 +13,8 @@ export default {
         marginBottom: 16
     },
     logo: {
-        height: 56,
-        width: 149
+        height: 50.8,
+        width: 200
     },
     input:{
         height: 35,
@@ -37,7 +37,16 @@ export default {
         backgroundColor: Colors.branco,
         width: '100%',
         height: 'auto',
-        borderRadius: 4
+        borderRadius: 4, 
+        padding: 20
+    },
+    styleButton:{
+        width: '100%',
+        borderRadius: 4,
+        height: 40,
+        backgroundColor: Colors.azulClaro,
+        paddingTop: 10.5,
+        paddingBottom: 10.5
     },
     boxChart:{
         backgroundColor: Colors.branco,
