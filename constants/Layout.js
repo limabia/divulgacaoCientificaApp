@@ -83,6 +83,12 @@ export default {
     fontSize: 30,
     fontWeight: '500'
   },
+  Medium20Azul:{
+    color: Colors.azul,
+    // fontFamily: 'robotmedium',
+    fontSize: 20,
+    fontWeight: '500'
+  },
   Regular14C2:{
     color: Colors.C2,
     // fontFamily: 'robotmedium',
@@ -104,8 +110,8 @@ export default {
     elevation: 1,
   },
   backImage:{
-    height: 16,
-    width: 19,
+    height: 25,
+    width: 25,
     marginLeft: 16
   },
   notificationsImage:{
@@ -140,5 +146,13 @@ export default {
     marginHorizontal: -15,
     marginTop: 6,
     height: 20
+  },
+  medium20:{
+    fontSize: 16,
+    fontWeight: '500'
+  },
+  light15:{
+    fontSize: 12,
+    fontWeight: '200'
   }
 };

@@ -7,10 +7,10 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native';
-import homeStyle from '../assets/css/home.js';
+import homeStyle from '../../../assets/css/home';
 import Layout from '../constants/Layout.js';
 import Colors from "../constants/Colors";
-export default class ArtigoUmScreen extends React.Component {
+export default class ArtigoUmCienciasHumanasScreen extends React.Component {
     redirectArtigo1(){
         this.props.navigation.navigate('uploadScreen')
     }

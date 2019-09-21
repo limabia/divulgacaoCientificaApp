@@ -40,6 +40,10 @@ export default {
         borderRadius: 4, 
         padding: 20
     },
+    imgIconHome:{
+        width: 20,
+        height: 20
+    },
     textCategoria:{
         color: Colors.azul,
         fontSize: 15, 

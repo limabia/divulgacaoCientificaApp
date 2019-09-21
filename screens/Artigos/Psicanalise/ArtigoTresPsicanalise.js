@@ -10,7 +10,7 @@ import {
 import homeStyle from '../../../assets/css/home';
 import Layout from '../constants/Layout.js';
 import Colors from "../constants/Colors";
-export default class ArtigoTresBiologiaScreen extends React.Component {
+export default class ArtigoTresEngenhariasScreen extends React.Component {
     redirectArtigo1(){
         this.props.navigation.navigate('uploadScreen')
     }

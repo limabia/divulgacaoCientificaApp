@@ -10,6 +10,12 @@ import HomeScreen from './screens/HomeScreen';
 import LinksScreen from "./screens/LinksScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import UploadScreen from "./screens/UploadScreen";
+import BiologiaScreen from "./screens/Categorias/BiologiaScreen";
+import PerfilScreen from "./screens/PerfilScreen";
+import CienciasHumanasScreen from "./screens/Categorias/CienciasHumanasScreen";
+import EngenhariasScreen from "./screens/Categorias/EngenhariasScreen";
+import PsicanaliseScreen from "./screens/Categorias/PsicanaliseScreen";
 import {AppLoading} from "expo";
 import Layout from './constants/Layout.js';
 import {Asset} from "expo-asset";
@@ -76,6 +82,108 @@ const RegisterScreen_StackNavigator = createStackNavigator({
         }),
     },
 });
+const UploadScreen_StackNavigator = createStackNavigator({
+    UploadScreen: {
+        screen: UploadScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Submeter artigo aqui</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const BiologiaScreen_StackNavigator = createStackNavigator({
+    BiologiaScreen: {
+        screen: BiologiaScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Ciências Biológicas</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const CienciasHumanasScreen_StackNavigator = createStackNavigator({
+    CienciasHumanasScreen: {
+        screen: CienciasHumanasScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Ciências Humanas</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const EngenhariasScreen_StackNavigator = createStackNavigator({
+    EngenhariasScreen: {
+        screen: EngenhariasScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Engenharias</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const PsicanaliseScreen_StackNavigator = createStackNavigator({
+    PsicanaliseScreen: {
+        screen: PsicanaliseScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Psicanalise</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
+const PerfilScreen_StackNavigator = createStackNavigator({
+    PerfilScreen: {
+        screen: PerfilScreen,
+        navigationOptions: ({navigation}) => ({
+            headerTitle: <Text style={Layout.textHeader}>Meu Perfil</Text>,
+            headerLeft:
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                </TouchableOpacity>,
+            headerStyle: {
+                backgroundColor: Colors.branco,
+                height: 56
+            },
+            headerTintColor: Colors.azul0,
+        }),
+    },
+});
 const LoginScreen_StackNavigator = createStackNavigator({
     LoginScreen: {
         screen: LoginScreen,
@@ -89,16 +197,11 @@ const HomeScreen_StackNavigator = createStackNavigator({
     HomeScreen: {
         screen: HomeScreen,
         navigationOptions: ({navigation}) => ({
-            headerTitle: <Text style={Layout.textHeader}>Escolha uma categoria</Text>,
+            headerTitle: <Text style={Layout.textHeader}>CiLearn</Text>,
             headerLeft:
-                <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')} >
-                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/left-arrow.png')}/>
+                <TouchableOpacity onPress={() => navigation.toggleDrawer()} >
+                    <Image style={[Layout.backImage, Layout.justifyContentCenter]} source={require('./assets/images/list.png')}/>
                 </TouchableOpacity>,
-            headerRight:
-            <TouchableOpacity style={Layout.containerFlex} onPress={() => navigation.navigate('LoginScreen')}>
-                <Image style={[Layout.notificationsImage, Layout.justifyContentCenter, Layout.mr23]}
-                       source={require('./assets/images/logout.png')}/>
-            </TouchableOpacity>,
             headerStyle: {
                 backgroundColor: Colors.branco,
                 height: 56
@@ -117,33 +220,74 @@ const LinksScreen_StackNavigator = createStackNavigator({
     },
 });
 const DrawerNavigator = createDrawerNavigator({
-    LoginScreen: {
-        screen: LoginScreen_StackNavigator,
+ 
+    PerfilScreen: {
+        screen: PerfilScreen_StackNavigator,
         navigationOptions: {
-            drawerLabel: 'LoginScreen',
+            drawerLabel: () => 'Meu Perfil',
+        },
+    },
+    UploadScreen: {
+        screen: UploadScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => 'Submeta seu artigo',
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    BiologiaScreen: {
+        screen: BiologiaScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    CienciasHumanasScreen: {
+        screen: CienciasHumanasScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    EngenhariasScreen: {
+        screen: EngenhariasScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
+            drawerLockMode: 'locked-closed'
+        },
+    },
+    PsicanaliseScreen: {
+        screen: PsicanaliseScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => null,
             drawerLockMode: 'locked-closed'
         },
     },
     RegisterScreen: {
         screen: RegisterScreen_StackNavigator,
         navigationOptions: {
-            drawerLabel: 'RegisterScreen',
+            drawerLabel: () => null,
             drawerLockMode: 'locked-closed'
         },
     },
     HomeScreen: {
         screen: HomeScreen_StackNavigator,
         navigationOptions: {
-            drawerLabel: 'HomeScreen',
+            drawerLabel: () => null,
             drawerLockMode: 'locked-closed',
         },
     },
     LinksScreen: {
         screen: LinksScreen_StackNavigator,
         navigationOptions: {
-            drawerLabel: 'LinksScreen',
+            drawerLabel: () => null,
             drawerLockMode: 'locked-closed',
 
+        },
+    },
+    LoginScreen: {
+        screen: LoginScreen_StackNavigator,
+        navigationOptions: {
+            drawerLabel: () => 'Sair',
         },
     },
 }, {

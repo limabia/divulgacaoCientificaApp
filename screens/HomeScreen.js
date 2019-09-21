@@ -14,38 +14,62 @@ export default class HomeScreen extends React.Component {
     redirectUploadArquivos(){
         this.props.navigation.navigate('uploadScreen')
     }
-    redirectCienciasHumanas(){
-        this.props.navigation.navigate('uploadScreen')
+    redirectBiologiaScreen(){
+        this.props.navigation.navigate('BiologiaScreen')
+    }
+    redirectCienciasHumanasScreen(){
+        this.props.navigation.navigate('CienciasHumanasScreen')
+    }
+    RedirectEngenhariasScreen(){
+        this.props.navigation.navigate('EngenhariasScreen')
+    }
+    RedirectPsicanaliseScreen(){
+        this.props.navigation.navigate('PsicanaliseScreen')
     }
     render() {
         return (
             <ScrollView style={homeStyle.container}>
-                <View style={[homeStyle.box, Layout.center, Layout.mb15]}>
-                    <Image style={[homeStyle.logo]}
-                           source={require('../assets/images/logoOPadrao.png')}/>
-                </View>
-                <TouchableOpacity
-                        style={[Layout.mt14, Layout.mb15, homeStyle.styleButton, Layout.blurCard]}
-                        onPress={() => {
-                            this.redirectUploadArquivos()
-                        }}>
-                            <View style={[Layout.row, Layout.center]}>
-                                <Text style={[Layout.Medium16C2, Layout.center]}>Submeter artigo  </Text> 
-                                <Image style={{width: 15, height: 15, marginLeft: 15}} source={require('../assets/images/upload-button.png')}/>
-                            </View>
+                <Text style={[Layout.Medium20Azul, Layout.center, Layout.mt14, Layout.mb15]}>Sobre o que você quer ler hoje?</Text>
+                <TouchableOpacity onPress={()=>{this.redirectCienciasHumanasScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
+                    <View style={Layout.row}>
+                        <View style={{width: '15%'}}>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                        </View>
+                        <View style={{width: '85%'}}>
+                            <Text style={homeStyle.textCategoria}>Ciências humanas</Text>
+                        </View>
+                    </View>
                 </TouchableOpacity>
-                <View style={[homeStyle.box, Layout.center, Layout.mb15]}>
-                    <Text style={homeStyle.textCategoria}>Ciências humanas</Text>
-                </View>
-                <View style={[homeStyle.box, Layout.center, Layout.mb15]}>
-                    <Text style={homeStyle.textCategoria}>Ciências Biológicas</Text>
-                </View>
-                <View style={[homeStyle.box, Layout.center, Layout.mb15]}>
-                    <Text style={homeStyle.textCategoria}>Engenharias</Text>
-                </View>
-                <View style={[homeStyle.box, Layout.center, Layout.mb15]}>
-                    <Text style={homeStyle.textCategoria}>Psicanalise</Text>
-                </View>
+                <TouchableOpacity onPress={()=>{this.redirectBiologiaScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
+                    <View style={Layout.row}>
+                        <View style={{width: '15%'}}>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                        </View>
+                        <View style={{width: '85%'}}>
+                            <Text style={homeStyle.textCategoria}>Ciências Biológicas</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>{this.RedirectEngenhariasScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
+                    <View style={Layout.row}>
+                        <View style={{width: '15%'}}>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                        </View>
+                        <View style={{width: '85%'}}>
+                            <Text style={homeStyle.textCategoria}>Engenharias</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>{this.RedirectPsicanaliseScreen()}} style={[homeStyle.box, Layout.center, Layout.mb15]}>
+                    <View style={Layout.row}>
+                        <View style={{width: '15%'}}>
+                            <Image style={homeStyle.imgIconHome} source={require('../assets/images/icon.png')}/>
+                        </View>
+                        <View style={{width: '85%'}}>
+                            <Text style={homeStyle.textCategoria}>Psicanalise</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
             </ScrollView>
         );
     }
